@@ -29,9 +29,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Framework.PlatformCompat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.MedsUseInfographic.Presentation", "JJ.MedsUseInfographic.Presentation\JJ.MedsUseInfographic.Presentation.csproj", "{6AE7BE56-06D3-4208-B9A3-FDDF097BA86A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.MedsUseInfographic.Data.InMemory", "JJ.MedsUseInfographic.Data\JJ.MedsUseInfographic.Data.InMemory.csproj", "{6137365B-F35E-4699-B931-AD114115EA06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.MedsUseInfographic.Data.InMemory", "JJ.MedsUseInfographic.Data.InMemory\JJ.MedsUseInfographic.Data.InMemory.csproj", "{6137365B-F35E-4699-B931-AD114115EA06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.MedsUseInfographic.Data", "JJ.MedsUseInfographic.Data\JJ.MedsUseInfographic.Data\JJ.MedsUseInfographic.Data.csproj", "{A442649E-A03B-4724-AA32-E08DC10E8FC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.MedsUseInfographic.Data", "JJ.MedsUseInfographic.Data\JJ.MedsUseInfographic.Data.csproj", "{A442649E-A03B-4724-AA32-E08DC10E8FC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDCFB14E-7404-4A83-B22E-D44AA5037C90}"
 	ProjectSection(SolutionItems) = preProject

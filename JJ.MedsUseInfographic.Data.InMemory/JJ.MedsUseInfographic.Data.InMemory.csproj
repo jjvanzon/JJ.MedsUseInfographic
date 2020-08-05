@@ -39,7 +39,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="JJ.MedsUseInfographic.Data\JJ.MedsUseInfographic.Data.csproj">
+    <ProjectReference Include="..\JJ.MedsUseInfographic.Data\JJ.MedsUseInfographic.Data.csproj">
       <Project>{a442649e-a03b-4724-aa32-e08dc10e8fc9}</Project>
       <Name>JJ.MedsUseInfographic.Data</Name>
     </ProjectReference>

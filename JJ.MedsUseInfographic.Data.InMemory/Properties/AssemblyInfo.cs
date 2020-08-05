@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JJ.MedsUseInfographic.Data")]
+[assembly: AssemblyTitle("JJ.MedsUseInfographic.Data.InMemory")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("JJ.MedsUseInfographic.Data")]
+[assembly: AssemblyProduct("JJ.MedsUseInfographic.Data.InMemory")]
 [assembly: AssemblyCopyright("Copyright © Jan Joost van Zon 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a442649e-a03b-4724-aa32-e08dc10e8fc9")]
+[assembly: Guid("6137365b-f35e-4699-b931-ad114115ea06")]
 
 // Version information for an assembly consists of the following four values:
 //
