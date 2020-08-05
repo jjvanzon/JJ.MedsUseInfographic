@@ -46,7 +46,7 @@ namespace JJ.MedsUseInfographic.Presentation
         {
             var viewModel = new PillViewModel
             {
-                Size = GetPillSizeEnum(entity.Milligrams),
+                PillSize = GetPillSizeEnum(entity.Milligrams),
                 Style = GetPillStyleEnum(entity.Milligrams),
                 TimeOfDay = entity.DateTime.TimeOfDay
             };
@@ -58,9 +58,9 @@ namespace JJ.MedsUseInfographic.Presentation
         {
             switch (milligrams)
             {
-                case 6.25m: return PillSizeEnum.Size1;
-                case 12.5m: return PillSizeEnum.Size2;
-                case 50m: return PillSizeEnum.Size3;
+                case 6.25m: return PillSizeEnum.PillSize1;
+                case 12.5m: return PillSizeEnum.PillSize2;
+                case 50m: return PillSizeEnum.PillSize3;
                 default: throw new InvalidValueException(milligrams);
             }
         }

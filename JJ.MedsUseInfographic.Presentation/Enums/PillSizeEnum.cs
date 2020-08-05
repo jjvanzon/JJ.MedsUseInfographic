@@ -3,8 +3,8 @@
     public enum PillSizeEnum
     {
         Undefined,
-        Size1,
-        Size2,
-        Size3
+        PillSize1,
+        PillSize2,
+        PillSize3
     }
 }

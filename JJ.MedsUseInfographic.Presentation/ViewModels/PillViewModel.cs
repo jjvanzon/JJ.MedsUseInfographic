@@ -6,7 +6,7 @@ namespace JJ.MedsUseInfographic.Presentation.ViewModels
     public class PillViewModel
     { 
         public TimeSpan TimeOfDay { get; set; }
-        public PillSizeEnum Size { get; set; }
+        public PillSizeEnum PillSize { get; set; }
         public PillStyleEnum Style { get; set; }
     }
 }

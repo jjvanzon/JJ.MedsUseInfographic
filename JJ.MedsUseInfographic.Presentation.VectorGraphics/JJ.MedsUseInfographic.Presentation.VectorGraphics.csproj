@@ -35,16 +35,26 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ElementBase.cs" />
     <Compile Include="MainElement.cs" />
     <Compile Include="PathCurveElement.cs" />
     <Compile Include="PillCircleElement.cs" />
+    <Compile Include="StyleHelper.cs" />
     <Compile Include="TotalADayCurveElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\JJs Software\JJ.Framework\Framework\Exceptions\JJ.Framework.Exceptions.csproj">
+      <Project>{FA44ABA2-8E13-402C-A5A0-8D73C74B5181}</Project>
+      <Name>JJ.Framework.Exceptions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\JJs Software\JJ.Framework\Framework\VectorGraphics\JJ.Framework.VectorGraphics.csproj">
       <Project>{52e03e08-331a-4ca7-8d8f-6f598c94eed4}</Project>
       <Name>JJ.Framework.VectorGraphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJ.MedsUseInfographic.Presentation\JJ.MedsUseInfographic.Presentation.csproj">
+      <Project>{6AE7BE56-06D3-4208-B9A3-FDDF097BA86A}</Project>
+      <Name>JJ.MedsUseInfographic.Presentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
