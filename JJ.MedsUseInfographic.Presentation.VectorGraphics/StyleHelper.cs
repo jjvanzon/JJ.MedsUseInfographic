@@ -10,8 +10,8 @@ namespace JJ.MedsUseInfographic.Presentation.VectorGraphics
         public static LineStyle LineStyle_SolidCircle { get; } = new LineStyle();
         public static BackStyle BackStyle_OutlinedCircle_FilledWithAlternateColor { get; } = new BackStyle();
         public static LineStyle LineStyle_OutlinedCircle_FilledWithAlternateColor { get; } = new LineStyle();
-        public static float CircleWidth1 { get; }
-        public static float CircleWidth2 { get; }
-        public static float CircleWidth3 { get; }
+        public static float CircleWidth1 { get; } = 6.25f;
+        public static float CircleWidth2 { get; } = 12.5f;
+        public static float CircleWidth3 { get; } = 50f;
     }
 }

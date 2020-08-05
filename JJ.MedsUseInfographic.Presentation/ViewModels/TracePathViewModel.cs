@@ -2,7 +2,7 @@
 
 namespace JJ.MedsUseInfographic.Presentation.ViewModels
 {
-    public class PathViewModel
+    public class TracePathViewModel
     {
         public IList<PointViewModel> Points { get; set; }
     }

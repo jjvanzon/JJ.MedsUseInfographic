@@ -47,6 +47,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -69,6 +72,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\JJs Software\JJ.Framework\Framework\VectorGraphics\JJ.Framework.VectorGraphics.csproj">
+      <Project>{52e03e08-331a-4ca7-8d8f-6f598c94eed4}</Project>
+      <Name>JJ.Framework.VectorGraphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\JJs Software\JJ.Framework\Framework\WinForms\JJ.Framework.WinForms.csproj">
+      <Project>{84a66716-c686-4b8e-a092-cfe38ca7dde0}</Project>
+      <Name>JJ.Framework.WinForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJ.MedsUseInfographic.Presentation.VectorGraphics\JJ.MedsUseInfographic.Presentation.VectorGraphics.csproj">
+      <Project>{E6FB1B41-E95A-4814-AC41-1EED2BDAA402}</Project>
+      <Name>JJ.MedsUseInfographic.Presentation.VectorGraphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJ.MedsUseInfographic.Presentation\JJ.MedsUseInfographic.Presentation.csproj">
+      <Project>{6AE7BE56-06D3-4208-B9A3-FDDF097BA86A}</Project>
+      <Name>JJ.MedsUseInfographic.Presentation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

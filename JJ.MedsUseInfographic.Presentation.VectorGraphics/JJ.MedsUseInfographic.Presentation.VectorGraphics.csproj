@@ -35,10 +35,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DayElement.cs" />
     <Compile Include="ElementBase.cs" />
     <Compile Include="MainElement.cs" />
-    <Compile Include="PathCurveElement.cs" />
-    <Compile Include="PillCircleElement.cs" />
+    <Compile Include="TracePathCurveElement.cs" />
+    <Compile Include="PillElement.cs" />
     <Compile Include="StyleHelper.cs" />
     <Compile Include="TotalADayCurveElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

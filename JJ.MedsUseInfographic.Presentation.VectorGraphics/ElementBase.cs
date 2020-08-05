@@ -2,7 +2,7 @@
 
 namespace JJ.MedsUseInfographic.Presentation.VectorGraphics
 {
-    internal class ElementBase : Element
+    public class ElementBase : Element
     {
         public ElementBase(Element parent) : base(parent) => Position = new RectanglePosition(this);
 

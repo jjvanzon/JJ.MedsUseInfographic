@@ -41,7 +41,7 @@
     <Compile Include="IMainPresenter.cs" />
     <Compile Include="MainPresenter.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\PathViewModel.cs" />
+    <Compile Include="ViewModels\TracePathViewModel.cs" />
     <Compile Include="Enums\PillSizeEnum.cs" />
     <Compile Include="Enums\PillStyleEnum.cs" />
     <Compile Include="ViewModels\PillViewModel.cs" />
@@ -49,6 +49,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\JJs Software\JJ.Framework\Framework\Collections\JJ.Framework.Collections.csproj">
+      <Project>{5d06a212-5459-47f3-8109-e012c5fc9e3a}</Project>
+      <Name>JJ.Framework.Collections</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\JJs Software\JJ.Framework\Framework\Exceptions\JJ.Framework.Exceptions.csproj">
       <Project>{FA44ABA2-8E13-402C-A5A0-8D73C74B5181}</Project>
       <Name>JJ.Framework.Exceptions</Name>

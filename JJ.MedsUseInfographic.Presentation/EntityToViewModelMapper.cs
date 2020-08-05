@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using JJ.Framework.Exceptions.InvalidValues;
+using JJ.Framework.Collections;
 using JJ.Framework.Mathematics;
 using JJ.MedsUseInfographic.Data;
 using JJ.MedsUseInfographic.Presentation.Enums;
@@ -23,7 +24,7 @@ namespace JJ.MedsUseInfographic.Presentation
             {
                 Days = groupsByDay.Select(ConvertToDayViewModel).ToList(),
                 TotalMilligramsADay = groupsByDay.Select(GetTotalMilligrams).ToList(),
-                Paths = new List<PathViewModel>()
+                TracePaths = new List<TracePathViewModel>()
             };
 
             return viewModel;
@@ -34,8 +35,11 @@ namespace JJ.MedsUseInfographic.Presentation
 
         private DayViewModel ConvertToDayViewModel(IEnumerable<PillMoment> pillMomentsOfADay)
         {
+            pillMomentsOfADay = pillMomentsOfADay.ToArray();
+
             var viewModel = new DayViewModel
             {
+                DayNumber = pillMomentsOfADay.Select(x => x.DateTime.DayOfYear).SingleWithClearException(),
                 Pills = pillMomentsOfADay.Select(ConvertToPillViewModel).ToList()
             };
 
