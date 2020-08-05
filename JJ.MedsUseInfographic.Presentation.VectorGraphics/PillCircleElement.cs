@@ -8,14 +8,9 @@ using JJ.MedsUseInfographic.Presentation.ViewModels;
 
 namespace JJ.MedsUseInfographic.Presentation.VectorGraphics
 {
-    internal class PillCircleElement : ElementBase
+    internal class PillCircleElement : Ellipse
     {
-        private readonly Ellipse _ellipse;
-
-        public PillCircleElement(Element parent) : base(parent)
-        {
-            _ellipse = new Ellipse(this);
-        }
+        public PillCircleElement(Element parent) : base(parent) { }
 
         private PillViewModel _viewModel;
 
@@ -35,18 +30,18 @@ namespace JJ.MedsUseInfographic.Presentation.VectorGraphics
             switch (_viewModel.Style)
             {
                 case PillStyleEnum.Style1:
-                    _ellipse.Style.BackStyle = StyleHelper.BackStyle_OutlinedCircle;
-                    _ellipse.Style.LineStyle = StyleHelper.LineStyle_OutlinedCircle;
+                    Style.BackStyle = StyleHelper.BackStyle_OutlinedCircle;
+                    Style.LineStyle = StyleHelper.LineStyle_OutlinedCircle;
                     break;
 
                 case PillStyleEnum.Style2:
-                    _ellipse.Style.BackStyle = StyleHelper.BackStyle_SolidCircle;
-                    _ellipse.Style.LineStyle = StyleHelper.LineStyle_SolidCircle;
+                    Style.BackStyle = StyleHelper.BackStyle_SolidCircle;
+                    Style.LineStyle = StyleHelper.LineStyle_SolidCircle;
                     break;
-
+                    
                 case PillStyleEnum.Style3:
-                    _ellipse.Style.BackStyle = StyleHelper.BackStyle_OutlinedCircle_FilledWithAlternateColor;
-                    _ellipse.Style.LineStyle = StyleHelper.LineStyle_OutlinedCircle_FilledWithAlternateColor;
+                    Style.BackStyle = StyleHelper.BackStyle_OutlinedCircle_FilledWithAlternateColor;
+                    Style.LineStyle = StyleHelper.LineStyle_OutlinedCircle_FilledWithAlternateColor;
                     break;
 
                 default:
@@ -61,18 +56,18 @@ namespace JJ.MedsUseInfographic.Presentation.VectorGraphics
             switch (_viewModel.PillSize)
             { 
                 case PillSizeEnum.PillSize1:
-                    _ellipse.Position.Width = StyleHelper.CircleWidth1;
-                    _ellipse.Position.Height = StyleHelper.CircleWidth1;
+                    Position.Width = StyleHelper.CircleWidth1;
+                    Position.Height = StyleHelper.CircleWidth1;
                     break;
 
                 case PillSizeEnum.PillSize2:
-                    _ellipse.Position.Width = StyleHelper.CircleWidth2;
-                    _ellipse.Position.Height = StyleHelper.CircleWidth2;
+                    Position.Width = StyleHelper.CircleWidth2;
+                    Position.Height = StyleHelper.CircleWidth2;
                     break; 
 
                 case PillSizeEnum.PillSize3:
-                    _ellipse.Position.Width = StyleHelper.CircleWidth3;
-                    _ellipse.Position.Height = StyleHelper.CircleWidth3;
+                    Position.Width = StyleHelper.CircleWidth3;
+                    Position.Height = StyleHelper.CircleWidth3;
                     break; 
 
                 default:
@@ -81,8 +76,8 @@ namespace JJ.MedsUseInfographic.Presentation.VectorGraphics
 
             // Position
             const float totalMinutesADay = 24 * 60;
-            _ellipse.Position.CenterX = (float)_viewModel.TimeOfDay.TotalMinutes / totalMinutesADay;
-            _ellipse.Position.CenterY = 0;
+            Position.CenterX = (float)_viewModel.TimeOfDay.TotalMinutes / totalMinutesADay;
+            Position.CenterY = 0;
         }
     }
 }
