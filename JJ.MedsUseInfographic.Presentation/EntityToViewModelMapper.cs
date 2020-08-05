@@ -4,6 +4,10 @@ using System.Linq;
 using JJ.Framework.Exceptions.InvalidValues;
 using JJ.Framework.Mathematics;
 using JJ.MedsUseInfographic.Data;
+using JJ.MedsUseInfographic.Presentation.Enums;
+using JJ.MedsUseInfographic.Presentation.ViewModels;
+
+// ReSharper disable SuggestVarOrType_Elsewhere
 
 namespace JJ.MedsUseInfographic.Presentation
 {
@@ -13,21 +17,25 @@ namespace JJ.MedsUseInfographic.Presentation
         {
             if (entities == null) throw new ArgumentNullException(nameof(entities));
 
-            var groupsByDay = entities.GroupBy(x => x.DateTime.Date);
+            var groupsByDay = entities.GroupBy(x => x.DateTime.Date).ToArray();
 
             var viewModel = new MainViewModel
             {
                 Days = groupsByDay.Select(ConvertToDayViewModel).ToList(),
+                TotalMilligramsADay = groupsByDay.Select(GetTotalMilligrams).ToList(),
                 Paths = new List<PathViewModel>()
             };
 
             return viewModel;
         }
 
+        private decimal GetTotalMilligrams(IEnumerable<PillMoment> pillMomentsOfADay)
+            => pillMomentsOfADay.Sum(y => y.Milligrams);
+
         private DayViewModel ConvertToDayViewModel(IEnumerable<PillMoment> pillMomentsOfADay)
         {
             var viewModel = new DayViewModel
-            { 
+            {
                 Pills = pillMomentsOfADay.Select(ConvertToPillViewModel).ToList()
             };
 
@@ -37,39 +45,39 @@ namespace JJ.MedsUseInfographic.Presentation
         private PillViewModel ConvertToPillViewModel(PillMoment entity)
         {
             var viewModel = new PillViewModel
-            { 
-                Size = GetPillSizeEnum(entity.DosageInMilligrams),
-                Style = GetPillStyleEnum(entity.DosageInMilligrams),
+            {
+                Size = GetPillSizeEnum(entity.Milligrams),
+                Style = GetPillStyleEnum(entity.Milligrams),
                 TimeOfDay = entity.DateTime.TimeOfDay
             };
 
             return viewModel;
         }
 
-        private PillSizeEnum GetPillSizeEnum(decimal dosageInMilligrams)
+        private PillSizeEnum GetPillSizeEnum(decimal milligrams)
         {
-            switch (dosageInMilligrams)
+            switch (milligrams)
             {
                 case 6.25m: return PillSizeEnum.Size1;
                 case 12.5m: return PillSizeEnum.Size2;
                 case 50m: return PillSizeEnum.Size3;
-                default: throw new InvalidValueException(dosageInMilligrams);
+                default: throw new InvalidValueException(milligrams);
             }
         }
 
-        private PillStyleEnum GetPillStyleEnum(decimal dosageInMilligrams)
+        private PillStyleEnum GetPillStyleEnum(decimal milligrams)
         {
-            switch (dosageInMilligrams)
+            switch (milligrams)
             {
-                case 6.25m: 
+                case 6.25m:
                 case 12.5m:
-                    return Randomizer.GetRandomItem(new [] { PillStyleEnum.Style1, PillStyleEnum.Style2 });
+                    return Randomizer.GetRandomItem(new[] { PillStyleEnum.Style1, PillStyleEnum.Style2 });
 
-                case 50m: 
+                case 50m:
                     return PillStyleEnum.Style3;
 
-                default: 
-                    throw new InvalidValueException(dosageInMilligrams);
+                default:
+                    throw new InvalidValueException(milligrams);
             }
         }
     }

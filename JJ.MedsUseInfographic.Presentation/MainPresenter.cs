@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using JJ.MedsUseInfographic.Data;
 using JJ.MedsUseInfographic.Data.InMemory;
+using JJ.MedsUseInfographic.Presentation.ViewModels;
 
 namespace JJ.MedsUseInfographic.Presentation
 {
