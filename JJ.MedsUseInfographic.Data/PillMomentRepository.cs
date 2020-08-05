@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace JJ.MedsUseInfographic.Data
+namespace JJ.MedsUseInfographic.Data.InMemory
 {
     public class PillMomentRepository : IPillMomentRepository
     {
