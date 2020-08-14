@@ -74,11 +74,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\JJs Software\JJ.Framework\Framework\VectorGraphics\JJ.Framework.VectorGraphics.csproj">
+    <ProjectReference Include="..\..\JJ.Framework\Framework\VectorGraphics\JJ.Framework.VectorGraphics.csproj">
       <Project>{52e03e08-331a-4ca7-8d8f-6f598c94eed4}</Project>
       <Name>JJ.Framework.VectorGraphics</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\JJs Software\JJ.Framework\Framework\WinForms\JJ.Framework.WinForms.csproj">
+    <ProjectReference Include="..\..\JJ.Framework\Framework\WinForms\JJ.Framework.WinForms.csproj">
       <Project>{84a66716-c686-4b8e-a092-cfe38ca7dde0}</Project>
       <Name>JJ.Framework.WinForms</Name>
     </ProjectReference>
