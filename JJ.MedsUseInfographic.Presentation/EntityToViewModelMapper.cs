@@ -14,6 +14,8 @@ namespace JJ.MedsUseInfographic.Presentation
 {
     internal class EntityToViewModelMapper : IEntityToViewModelMapper
     {
+        private const int MINUTES_A_DAY = 60 * 24;
+
         public MainViewModel ConvertToMainViewModel(IList<PillMoment> entities)
         {
             if (entities == null) throw new ArgumentNullException(nameof(entities));
@@ -24,8 +26,12 @@ namespace JJ.MedsUseInfographic.Presentation
             {
                 Days = groupsByDay.Select(ConvertToDayViewModel).ToList(),
                 TotalMilligramsADay = groupsByDay.Select(GetTotalMilligrams).ToList(),
+                MinutesADayForWidth = MINUTES_A_DAY,
                 TracePaths = new List<TracePathViewModel>()
             };
+
+            viewModel.DayCountForHeight = viewModel.Days.Count;
+            viewModel.FirstDayNumberFormTopY = viewModel.Days.Select(x => x.DayNumber).FirstOrDefault();
 
             return viewModel;
         }

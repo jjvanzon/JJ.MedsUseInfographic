@@ -25,10 +25,20 @@ namespace JJ.MedsUseInfographic.Presentation.VectorGraphics
 
             if (_viewModel == null) return;
 
+            // Child View Models
             foreach (DayViewModel dayViewModel in _viewModel.Days)
             {
                 new DayElement(this) { ViewModel = dayViewModel };
             }
+
+            // Position
+            Position.Width = _viewModel.MinutesADayForWidth;
+            Position.Height = _viewModel.DayCountForHeight;
+            Position.X = 0;
+            Position.Y = _viewModel.FirstDayNumberFormTopY;
+
+            // TODO: Some margin.
+            //Position.SetMarginInPixels();
         }
     }
 }

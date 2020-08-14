@@ -13,7 +13,7 @@ Set Up Dev Environment
 ----------------------
 * Programmed with Visual Studio Community 2019.
 * The solutions might only build when cloning another repository too: JJ.Framework. ([https://github.com/jjvanzon/JJ.Framework](https://github.com/jjvanzon/JJ.Framework))
-* It should be cloned to a folder "..\JJs Software\JJ.Framwwork" relative to this folder.
+* It should be cloned to a folder "..\JJs Software\JJ.Framework" relative to this folder.
 * Sorry for the hassle.
 * First maybe build JJ.Framework.sln or perhaps NuGet-restoring it is enough.
 * Then the solution in this repository may build.
