@@ -48,6 +48,7 @@
             this.Controls.Add(this.diagramControl);
             this.Name = "MainForm";
             this.Text = "Meds Use Infographic";
+            this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.ResumeLayout(false);
 
         }

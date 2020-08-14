@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using JJ.Framework.VectorGraphics.Enums;
 using JJ.MedsUseInfographic.Presentation.VectorGraphics;
 using JJ.MedsUseInfographic.Presentation.ViewModels;
 using Diagram = JJ.Framework.VectorGraphics.Models.Elements.Diagram;
@@ -19,6 +20,8 @@ namespace JJ.MedsUseInfographic.Presentation.WinForms
             _mainViewModel = presenter.Show();
 
             var diagram = new Diagram();
+            diagram.Position.ScaleModeEnum = ScaleModeEnum.ViewPort;
+
             _mainElement = new MainElement(diagram.Background) { ViewModel = _mainViewModel };
 
             diagramControl.Location = new Point(0, 0);
@@ -29,18 +32,19 @@ namespace JJ.MedsUseInfographic.Presentation.WinForms
         {
             diagramControl.Size = new Size(Width, Height);
 
+            if (diagramControl.Diagram != null)
+            {
+                diagramControl.Width = ClientSize.Width;
+                diagramControl.Height = ClientSize.Height;
+            }
+
             if (_mainElement != null)
             {
-                _mainElement.Position.WidthInPixels = Width;
-                _mainElement.Position.HeightInPixels = Height;
-
-                // TODO: Would I delegate these scaling intricacies to the MainElement instead?
-                // TODO: Some margin.
-                //_mainElement.Position.Width = _mainViewModel.MinutesADayForWidth;
-                _mainElement.Position.Height = _mainViewModel.Days.Count;
-                // TODO: scaled Top X and Left Y.
+                _mainElement.Position.WidthInPixels = ClientSize.Width;
+                _mainElement.Position.HeightInPixels = ClientSize.Height;
             }
         }
 
+        private void MainForm_SizeChanged(object sender, System.EventArgs e) => PositionControls();
     }
 }
