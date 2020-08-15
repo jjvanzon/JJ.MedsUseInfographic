@@ -9,7 +9,7 @@ Steps
 -----
 - [ ] Strategy
   - [ ] Following a rigid plan might take a lot of energy from me.
-- [ ] __Prep dev environment__
+- [ ] Prep dev environment
   - [x] Publishing my Working Methods folder (with documentation templates) to an online git repository.
   - [x] Setting up planning notes
   - [x] Updating Visual Studio
@@ -18,10 +18,10 @@ Steps
   - [x] Updating ReSharper
   - [x] Uninstalling Visual Studio 2017
   - [x] ReSharper performance tuning
-  - [ ] __Fine-tuning Visual Studio settings__
+  - [ ] .. Fine-tuning Visual Studio settings
 - [ ] Software architecture (optionals)
-  - [ ] __Processing ReSharper warnings__
-  - [ ] __Setting up folder subdivision / code structure__
+  - [ ] .. Processing ReSharper warnings
+  - [ ] .. Setting up folder subdivision / code structure
   - [x] Setting up automated build
     - [x] master/develop branch and build separation.
     - [x] JJ.Framework is not in the right folder
@@ -37,8 +37,8 @@ Steps
   - [ ] >.. Sharing on LinkedIn?
   - [ ] >.. Sharing on Facebook?
   - [ ] >.. JJ.Framework issues (see Details below)
-  - [ ] >.. Using MarkDown for this document?
-- [ ] __Programming__
+  - [ ] __Using MarkDown for this document?__
+- [ ] Programming
   - [x] Code boiler plating
   - [x] Code layering
   - [x] Entity model
@@ -49,8 +49,8 @@ Steps
   - [ ] __Vector graphics elements__
   - [ ] __View model to vector graphics mapping__
   - [ ] __WinForms wrapper__
-  - [ ] Vector graphics styling
   - [ ] __Pill circles__
+  - [ ] Vector graphics styling
   - [ ] Total a day curve
   - [ ] Trace paths
   - [ ] >.. JJ.MedsUseInfographic.Data.SpecialFormat or .FromNotes: Parsing text from how I type in my meds use in my notes.
