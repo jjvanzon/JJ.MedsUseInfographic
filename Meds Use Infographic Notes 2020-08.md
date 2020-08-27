@@ -96,5 +96,6 @@ Looking up the details turned out to be a burden. Work was stopped for now.
   - For both Debug and Release configurations.
 - [x] 'Can be made private' warnings seem missing. O wait... it is 'can be made internal' warnings that might be turned on.
 - [ ] JJ.Framework.VectorGraphics
+  - WAS AT: ScaleModeEnum
 - [ ] Some of JJ.Framework.Drawing
 - [ ] Some of JJ.Framework.VectorGraphics
