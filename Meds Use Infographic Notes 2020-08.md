@@ -101,26 +101,29 @@ Looking up the details turned out to be a burden. Work was stopped for now.
 - [x] EventArg namespace doc comments
     - [x] Perhaps indicate whether coordinates are not only scaled or pixels, but also whether they are absolute or relative.
 - [ ] __Gestures namespace doc comments__
-    - __Was at: DragGesture__
-    - After studingy the way Gestures as a whole look again, what would happen is:
-    - A wrapper for a *surface/drawing/graphics technology* might pass along picked up mouse and keyboard events to the:
-    - *Diagram.GestureHandling*, which calls Diagram.Recalculate at certain times but also delegates to an internal:
-    - *GestureHandler*, which figures out things like:
-        - Which element was *hit* (currently only checks hits within rectagles despite other shapes like ellipses being part of the API).
-        - When events might *bubble* to parent elements
-        - Things like *mouse capturing* (when a mousedown might *fix* the involved element no matter where the mouse arrow goes until you let go of the mouse button).
-        - *Keyboard gestures* are currently only usable on the Diagram level or Diagram.BackGround level, so not related to an element. (That might require focus handling. *Focus* is *not* a feature of this API (yet).)
-        - but GestureHandler also calls to:
-    - *GestureBase.GestureInternals*: which are *internal* as a trick to try and isolate these members, which delegates back to
-    - *GestureBase.InternalHandle...* methods that are *protected*, which are implemented inside a Gesture class.
-    - *Gesture* objects: publically have basically *constructors* and *events*. Individual gesture objects would be tied to either the Diagram, Diagram.BackGround(?) or to individual Elements, which individually handle things like ClickEvent for a specific element for instance.
-    - So there I end up at the Gesture objects which I am currently trying to document.
-    - I would like to involve how these gesture objects are to be used. Specifically for instance instantiating gestures and assigning them to elements.
+    - __Was at: GestureInternals__
+    - [x] After studingy the way Gestures as a whole look again, what would happen is:
+    - [ ] A wrapper for a *surface/drawing/graphics technology* might pass along picked up mouse and keyboard events to the:
+    - [ ] *Diagram.GestureHandling*, which calls Diagram.Recalculate at certain times but also delegates to an internal:
+    - [ ] *GestureHandler*:
+        - [x] Would figures out things like:
+            - [x] *Hit testing*: Which element was hit (currently only checks hits within rectagles despite other shapes like ellipses being part of the API).
+            - [x] *Bubbling*: When events might *bubble* to parent elements
+            - [x] *Mouse capturing*: when a mousedown might *fix* the involved element no matter where the mouse arrow goes until you let go of the mouse button.
+        - [x] GestureHandler would call individual gestures to handle off the gesture after the involved element might have been figured out.
+        - [ ] This may happen in a bit of an elaborated way. GestureHandler may call:
+            - [ ] *GestureBase.GestureInternals*: which are *internal* as a trick to try and isolate these members, which delegates back to
+            - [ ] *GestureBase.InternalHandle...* methods that are *protected*, which are implemented inside a Gesture class.
+        - [x] *Keyboard gestures* are currently only usable on the Diagram level or Diagram.BackGround level, so not related to an element. (That might require focus handling. *Focus* is *not* a feature of this API (yet).)
+    - [x] *Gesture* objects: publically have basically *constructors* and *events*. Individual gesture objects would be tied to either the Diagram, Diagram.BackGround(?) or to individual Elements, which individually handle things like ClickEvent for a specific element for instance.
+    - [ ] So there I end up at the Gesture objects which I am currently trying to document.
+    - [x] I would like to involve how these gesture objects are to be used. Specifically for instance instantiating gestures and assigning them to elements.
 - [ ] Doc comments for some of JJ.Framework.Drawing
 - [ ] Doc comments for some of JJ.Framework.VectorGraphic
 
 ### 2020-08-26 Postponed (Scarce )JJ.Framework.VectorGraphics Refactorings
 
+- [ ] May rename GestureHandler to GestureElementDeterminer or something, since that might be the responsibility it would take on.
 - [ ] Renaming coordinate properties (X, Y) to be longer, yet more descriptive?
     - The idea 'makes sense on its own' might not hold up.
     - The aspects relative/absolute and pixel/scaled seem refined and not so obvious.
