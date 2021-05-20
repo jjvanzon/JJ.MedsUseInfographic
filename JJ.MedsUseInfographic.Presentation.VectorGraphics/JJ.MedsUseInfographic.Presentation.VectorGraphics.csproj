@@ -31,8 +31,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=2018.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.2018.2.1\lib\net20\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Business, Version=1.7.7796.35242, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Business.1.7.7796.35242\lib\net461\JJ.Framework.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Collections, Version=1.7.7796.35246, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Collections.1.7.7796.35246\lib\net461\JJ.Framework.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Common, Version=1.7.7796.35241, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Common.1.7.7796.35241\lib\net461\JJ.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Exceptions, Version=1.7.7796.35243, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Exceptions.1.7.7796.35243\lib\net461\JJ.Framework.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Mathematics, Version=1.7.7796.35247, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Mathematics.1.7.7796.35247\lib\net461\JJ.Framework.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.PlatformCompatibility, Version=1.7.7796.35242, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.PlatformCompatibility.1.7.7796.35242\lib\net461\JJ.Framework.PlatformCompatibility.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Reflection, Version=1.7.7796.35242, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Reflection.1.7.7796.35242\lib\net461\JJ.Framework.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Text, Version=1.7.7796.35241, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Text.1.7.7796.35241\lib\net461\JJ.Framework.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.VectorGraphics, Version=1.7.7805.36885, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.VectorGraphics.1.7.7805.36885\lib\net461\JJ.Framework.VectorGraphics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DayElement.cs" />
@@ -45,18 +78,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\JJ.Framework\Framework\Exceptions\JJ.Framework.Exceptions.csproj">
-      <Project>{FA44ABA2-8E13-402C-A5A0-8D73C74B5181}</Project>
-      <Name>JJ.Framework.Exceptions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\JJ.Framework\Framework\VectorGraphics\JJ.Framework.VectorGraphics.csproj">
-      <Project>{52e03e08-331a-4ca7-8d8f-6f598c94eed4}</Project>
-      <Name>JJ.Framework.VectorGraphics</Name>
-    </ProjectReference>
     <ProjectReference Include="..\JJ.MedsUseInfographic.Presentation\JJ.MedsUseInfographic.Presentation.csproj">
       <Project>{6AE7BE56-06D3-4208-B9A3-FDDF097BA86A}</Project>
       <Name>JJ.MedsUseInfographic.Presentation</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

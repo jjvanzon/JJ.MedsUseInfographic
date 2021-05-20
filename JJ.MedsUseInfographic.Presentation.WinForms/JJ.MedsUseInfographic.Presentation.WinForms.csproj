@@ -33,9 +33,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=2018.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.2018.2.1\lib\net20\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Business, Version=1.7.7796.35242, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Business.1.7.7796.35242\lib\net461\JJ.Framework.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Collections, Version=1.7.7796.35246, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Collections.1.7.7796.35246\lib\net461\JJ.Framework.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Common, Version=1.7.7796.35241, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Common.1.7.7796.35241\lib\net461\JJ.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Drawing, Version=1.7.7798.30604, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Drawing.1.7.7798.30604\lib\net461\JJ.Framework.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Exceptions, Version=1.7.7796.35243, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Exceptions.1.7.7796.35243\lib\net461\JJ.Framework.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Logging, Version=1.7.7798.30603, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Logging.1.7.7798.30603\lib\net461\JJ.Framework.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Mathematics, Version=1.7.7796.35247, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Mathematics.1.7.7796.35247\lib\net461\JJ.Framework.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.PlatformCompatibility, Version=1.7.7796.35242, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.PlatformCompatibility.1.7.7796.35242\lib\net461\JJ.Framework.PlatformCompatibility.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Presentation, Version=1.7.7796.35245, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Presentation.1.7.7796.35245\lib\net461\JJ.Framework.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Reflection, Version=1.7.7796.35242, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Reflection.1.7.7796.35242\lib\net461\JJ.Framework.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.Text, Version=1.7.7796.35241, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.Text.1.7.7796.35241\lib\net461\JJ.Framework.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.VectorGraphics, Version=1.7.7805.36885, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.VectorGraphics.1.7.7805.36885\lib\net461\JJ.Framework.VectorGraphics.dll</HintPath>
+    </Reference>
+    <Reference Include="JJ.Framework.WinForms, Version=1.7.7805.36885, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JJ.Framework.WinForms.1.7.7805.36885\lib\net461\JJ.Framework.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +105,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,14 +120,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\JJ.Framework\Framework\VectorGraphics\JJ.Framework.VectorGraphics.csproj">
-      <Project>{52e03e08-331a-4ca7-8d8f-6f598c94eed4}</Project>
-      <Name>JJ.Framework.VectorGraphics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\JJ.Framework\Framework\WinForms\JJ.Framework.WinForms.csproj">
-      <Project>{84a66716-c686-4b8e-a092-cfe38ca7dde0}</Project>
-      <Name>JJ.Framework.WinForms</Name>
-    </ProjectReference>
     <ProjectReference Include="..\JJ.MedsUseInfographic.Presentation.VectorGraphics\JJ.MedsUseInfographic.Presentation.VectorGraphics.csproj">
       <Project>{E6FB1B41-E95A-4814-AC41-1EED2BDAA402}</Project>
       <Name>JJ.MedsUseInfographic.Presentation.VectorGraphics</Name>
