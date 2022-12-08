@@ -122,7 +122,7 @@ Looking up the details turned out to be a burden. Work was stopped for now.
 - [ ] Doc comments for some of JJ.Framework.Drawing
 - [ ] Doc comments for some of JJ.Framework.VectorGraphic
 
-### 2020-08-26 Postponed (Scarce )JJ.Framework.VectorGraphics Refactorings
+### 2020-08-26 Postponed (Scarce) JJ.Framework.VectorGraphics Refactorings
 
 - [ ] May rename GestureHandler to GestureElementDeterminer or something, since that might be the responsibility it would take on.
 - [ ] Renaming coordinate properties (X, Y) to be longer, yet more descriptive?
